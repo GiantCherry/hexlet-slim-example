@@ -1,0 +1,14 @@
+<a href="/users">Все Пользователи</a>
+
+<!-- BEGIN (write your solution here) -->
+<form action="/users" method="get">
+    <input type="search" name="term" value="<?= htmlspecialchars($term) ?>" required />
+    <input type="submit" value="Search" />
+</form>
+
+<?php foreach ($searchAnswer as $user): ?>
+    <div>
+        <?= htmlspecialchars($user['firstName']) ?>
+    </div>
+<?php endforeach ?>
+<!-- END -->
